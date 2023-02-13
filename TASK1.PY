@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from plotly.offline import init_notebook_mode,plot,iplot
 # from google.colab import drive
 from sklearn import tree
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 # %matplotlib inline
@@ -61,8 +61,8 @@ print(xtest)
 
 
 
-#Training the model using Linear Regression
-lr=LinearRegression()
+#Training the model using Logistic Regression
+lr=LogisticRegression()
 lr.fit(xtrain,ytrain)
 
 
@@ -75,9 +75,9 @@ accuracy=accuracy_score(ytest,prediction)*100
 
 
 #Accuracy percentage
-print("Accuracy for LinearRegression : ",accuracy)
+print("Accuracy for LogisticRegression : ",accuracy)
 print(ytest)
-print(prediction)
+print(np.array(prediction))
 
 
 
@@ -110,7 +110,7 @@ accuracy=accuracy_score(ytest,prediction)*100
 #Accuracy percentage
 print("Accuracy for DesisionTreeClassifier : ",accuracy)
 print(ytest)
-print(prediction)
+print(np.array(prediction))
 
 
 
